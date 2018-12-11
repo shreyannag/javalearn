@@ -1,2 +1,2 @@
 # javalearn
-Command Line Programs
+Learning Java
