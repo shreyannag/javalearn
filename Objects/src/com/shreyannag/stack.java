@@ -1,45 +1,36 @@
 package com.shreyannag;
-/* Java program to implement basic stack 
+
+/* Java program to implement basic stack
 operations */
-class Stack
-{
+class Stack {
     static final int MAX = 1000;
     int top;
     int a[] = new int[MAX]; // Maximum size of Stack 
 
-    boolean isEmpty()
-    {
+    boolean isEmpty() {
         return (top < 0);
     }
-    Stack()
-    {
+
+    Stack() {
         top = -1;
     }
 
-    boolean push(int x)
-    {
-        if (top >= (MAX-1))
-        {
+    boolean push(int x) {
+        if (top >= (MAX - 1)) {
             System.out.println("Stack Overflow");
             return false;
-        }
-        else
-        {
+        } else {
             a[++top] = x;
             System.out.println(x + " pushed into stack");
             return true;
         }
     }
 
-    int pop()
-    {
-        if (top < 0)
-        {
+    int pop() {
+        if (top < 0) {
             System.out.println("Stack Underflow");
             return 0;
-        }
-        else
-        {
+        } else {
             int x = a[top--];
             return x;
         }
@@ -47,10 +38,8 @@ class Stack
 }
 
 // Driver code 
-class Main3
-{
-    public static void main(String args[])
-    {
+class Main3 {
+    public static void main(String args[]) {
         Stack s = new Stack();
         s.push(10);
         s.push(20);
